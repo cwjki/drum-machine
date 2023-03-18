@@ -1,11 +1,11 @@
-import React from 'react';
+import DrumBox from "./components/DrumBox";
 
 function App() {
-  return (
-    <div className="App">
-     Hello world
+  return(
+    <div>
+      <DrumBox />
     </div>
-  );
+  ) ;
 }
 
 export default App;
