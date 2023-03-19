@@ -1,7 +1,20 @@
 const DrumBox = () => {
   return (
     <div className="container-fluid">
-      <div className="row align-items-center">
+      <div className="row pt-5 align-items-center text-center">
+        <div className="col-md-10 col-12 mx-auto">
+          <div className="card bg-secondary rounded-4 shadow-lg">
+            <div className="card-body ">
+              <div className="card-title text-info fs-2 fw-bold">Drum Machine</div>
+              <div className="card-text text-primary fw-semibold">
+                the third project of the freeCodeCamp's Front End Development Libraries certification
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row align-items-center mt-5 pt-4">
         <div className="col-md-6 col-sm-9 col-11 mx-auto border border-info p-5 bg-secondary rounded-4 shadow-lg">
           <div className="row text-center mt-1">
             <div className="col mybtn">
@@ -40,7 +53,7 @@ const DrumBox = () => {
       </div>
 
       {/* Footer */}
-      <nav className="navbar pb-2 ">
+      <nav className="navbar pb-2 mt-2">
         <div className="container-fluid justify-content-center">
           <span className="navbar-brand fs-6 text-light">by cwjki</span>
           <a
