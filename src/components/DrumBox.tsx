@@ -5,13 +5,13 @@ const DrumBox = () => {
         <div className="col-md-6 col-sm-9 col-11 mx-auto border border-info p-5 bg-secondary rounded-4 shadow-lg">
           <div className="row text-center mt-1">
             <div className="col mybtn">
-              <button className="btn btn-info fs-2 fw-bold px-4">Q</button>
+              <button className="btn btn-info fs-2 fw-bold">Q</button>
             </div>
             <div className="col">
-              <button className="btn btn-info fs-2 fw-bold px-4">W</button>
+              <button className="btn btn-info fs-2 fw-bold">W</button>
             </div>
             <div className="col">
-              <button className="btn btn-info fs-2 fw-bold px-4">E</button>
+              <button className="btn btn-info fs-2 fw-bold">E</button>
             </div>
           </div>
           <div className="row text-center mt-3">
