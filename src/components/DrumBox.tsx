@@ -1,7 +1,19 @@
 import { useState, MouseEvent, useEffect } from "react";
 
+// audios imports
+import cev_h2 from "../assets/Cev_H2.mp3";
+import Dsc_Oh from "../assets/.mp3";
+import heater1 from "../assets/Heater-1.mp3";
+import heater2 from "../assets/Heater-2.mp3";
+import heater3 from "../assets/Heater-3.mp3";
+import heater4 from "../assets/Heater-4.mp3";
+import heater4_1 from "../assets/Heater-4_1.mp3";
+import heater6 from "../assets/Heater-6.mp3";
+import kick_n_hat from "../assets/Kick_n_Hat.mp3";
+import rp4_kick_1 from "../assets/RP4_KICK_1.mp3";
+
 const DrumBox = () => {
-  const [sound, setSound] = useState("Sound");
+  const [soundMsg, setSoundMsg] = useState("Sound");
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
     alert(event.currentTarget.name);
@@ -9,7 +21,7 @@ const DrumBox = () => {
   };
 
   const keyDownHandler = ({ key }: { key: any }) => {
-    playAudio();
+    playAudio(key);
   };
 
   useEffect(() => {
@@ -18,10 +30,18 @@ const DrumBox = () => {
       window.removeEventListener("keydown", keyDownHandler);
     };
   }, []);
-  const playAudio = () => {
-    let audio = new Audio('./Heater-1.mp3');
-    audio.play();
-  }
+
+  const playAudio = (key: string) => {
+    let sound: string = "";
+    switch (key) {
+      case "q":
+        sound = cev_h2;
+        break;
+      default:
+        sound = "";
+    }
+    new Audio(sound).play();
+  };
 
   return (
     <div className="min-vw-100 min-vh-100 bg-primary">
@@ -47,7 +67,7 @@ const DrumBox = () => {
             <div className="row align-items-center text-center">
               <div className="col-6 mx-auto">
                 <div className="card bg-primary rounded-4">
-                  <div className="fs-6 py-1">{sound}</div>
+                  <div className="fs-6 py-1">{soundMsg}</div>
                 </div>
               </div>
             </div>
