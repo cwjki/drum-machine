@@ -95,20 +95,23 @@ const DrumBox = () => {
           </div>
         </div>
 
-        <div className="row align-items-center mt-5 pt-4">
+        <div id="drum-machine" className="row align-items-center mt-5 pt-4">
           <div className="col-md-6 col-sm-9 col-11 mx-auto border border-info p-5 bg-secondary rounded-4 shadow-lg">
             <div className="row align-items-center text-center">
               <div className="col-6 mx-auto">
                 <div className="card bg-primary rounded-4">
-                  <div className="fs-6 py-1">{soundMsg}</div>
+                  <div id="display" className="fs-6 py-1">
+                    {soundMsg}
+                  </div>
                 </div>
               </div>
             </div>
             <div className="row text-center mt-4">
               <div className="col mybtn">
                 <button
+                  id="Heater 1"
                   name="q"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   Q
@@ -116,8 +119,9 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  id="Heater 2"
                   name="w"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   W
@@ -125,8 +129,9 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  id="Heater 3"
                   name="e"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   E
@@ -136,8 +141,9 @@ const DrumBox = () => {
             <div className="row text-center mt-3">
               <div className="col">
                 <button
+                  id="Heater 4"
                   name="a"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   A
@@ -145,8 +151,9 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  id="Clap"
                   name="s"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   S
@@ -154,8 +161,9 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  id="Open HH"
                   name="d"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   D
@@ -165,8 +173,9 @@ const DrumBox = () => {
             <div className="row text-center mt-3">
               <div className="col">
                 <button
+                  id="Kick n' Hat"
                   name="z"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   Z
@@ -174,8 +183,9 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  id="Kick"
                   name="x"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   X
@@ -183,8 +193,9 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  id="Closed HH"
                   name="c"
-                  className="btn btn-info fs-2 fw-bold"
+                  className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
                   C
