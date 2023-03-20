@@ -14,22 +14,22 @@ import rp4_kick_1 from "../assets/RP4_KICK_1.mp3";
 const DrumBox = () => {
   const [soundMsg, setSoundMsg] = useState("Sound");
 
-  const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
-    alert(event.currentTarget.name);
-    event.preventDefault();
-  };
-
-  const keyDownHandler = ({ key }: { key: any }) => {
-    playAudio(key);
-  };
-
   useEffect(() => {
+    const keyDownHandler = ({ key }: { key: any }) => {
+      playAudio(key);
+    };
+
     window.addEventListener("keydown", keyDownHandler);
     return () => {
       window.removeEventListener("keydown", keyDownHandler);
     };
   }, []);
 
+  const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    playAudio(event.currentTarget.name);
+  };
+
+  // function that given a key handles the audio and audio text. The allows keys are 'q w e a s d z x c'.
   const playAudio = (key: string) => {
     let sound: string = "";
     switch (key) {
@@ -73,7 +73,6 @@ const DrumBox = () => {
       default:
         sound = "";
     }
-    
     new Audio(sound).play();
   };
 
@@ -108,7 +107,7 @@ const DrumBox = () => {
             <div className="row text-center mt-4">
               <div className="col mybtn">
                 <button
-                  name="Q"
+                  name="q"
                   className="btn btn-info fs-2 fw-bold"
                   onClick={handleClick}
                 >
@@ -116,32 +115,80 @@ const DrumBox = () => {
                 </button>
               </div>
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">W</button>
+                <button
+                  name="w"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  W
+                </button>
               </div>
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">E</button>
+                <button
+                  name="e"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  E
+                </button>
               </div>
             </div>
             <div className="row text-center mt-3">
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">A</button>
+                <button
+                  name="a"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  A
+                </button>
               </div>
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">S</button>
+                <button
+                  name="s"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  S
+                </button>
               </div>
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">D</button>
+                <button
+                  name="d"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  D
+                </button>
               </div>
             </div>
             <div className="row text-center mt-3">
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">Z</button>
+                <button
+                  name="z"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  Z
+                </button>
               </div>
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">X</button>
+                <button
+                  name="x"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  X
+                </button>
               </div>
               <div className="col">
-                <button className="btn btn-info fs-2 fw-bold">C</button>
+                <button
+                  name="c"
+                  className="btn btn-info fs-2 fw-bold"
+                  onClick={handleClick}
+                >
+                  C
+                </button>
               </div>
             </div>
           </div>
