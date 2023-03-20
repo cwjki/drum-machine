@@ -2,11 +2,10 @@ import { useState, MouseEvent, useEffect } from "react";
 
 // audios imports
 import cev_h2 from "../assets/Cev_H2.mp3";
-import Dsc_Oh from "../assets/.mp3";
+import dsc_oh from "../assets/Dsc_Oh.mp3";
 import heater1 from "../assets/Heater-1.mp3";
 import heater2 from "../assets/Heater-2.mp3";
 import heater3 from "../assets/Heater-3.mp3";
-import heater4 from "../assets/Heater-4.mp3";
 import heater4_1 from "../assets/Heater-4_1.mp3";
 import heater6 from "../assets/Heater-6.mp3";
 import kick_n_hat from "../assets/Kick_n_Hat.mp3";
@@ -35,11 +34,46 @@ const DrumBox = () => {
     let sound: string = "";
     switch (key) {
       case "q":
-        sound = cev_h2;
+        sound = heater1;
+        setSoundMsg("Heater 1");
         break;
+      case "w":
+        sound = heater2;
+        setSoundMsg("Heater 2");
+        break;
+      case "e":
+        sound = heater3;
+        setSoundMsg("Heater 3");
+        break;
+      case "a":
+        sound = heater4_1;
+        setSoundMsg("Heater 4");
+        break;
+      case "s":
+        sound = heater6;
+        setSoundMsg("Clap");
+        break;
+      case "d":
+        sound = dsc_oh;
+        setSoundMsg("Open HH");
+        break;
+      case "z":
+        sound = kick_n_hat;
+        setSoundMsg("Kick n' Hat");
+        break;
+      case "x":
+        sound = rp4_kick_1;
+        setSoundMsg("Kick");
+        break;
+      case "c":
+        sound = cev_h2;
+        setSoundMsg("Closed HH");
+        break;
+
       default:
         sound = "";
     }
+    
     new Audio(sound).play();
   };
 
