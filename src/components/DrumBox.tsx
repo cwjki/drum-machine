@@ -1,4 +1,4 @@
-import { useState, MouseEvent, useEffect } from "react";
+import { useState, MouseEvent, useEffect, useRef } from "react";
 
 // audios imports
 import cev_h2 from "../assets/Cev_H2.mp3";
@@ -26,6 +26,7 @@ const DrumBox = () => {
   }, []);
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    event.preventDefault();
     playAudio(event.currentTarget.name);
   };
 
@@ -108,11 +109,14 @@ const DrumBox = () => {
               </div>
             </div>
             <div className="row text-center mt-4">
-              <div className="col mybtn">
+              <div className="col">
                 <button
                   id="Heater 1"
                   name="q"
-                  className={"btn btn-info fs-2 fw-bold drum-pad" + (soundMsg === 'Heater 1' ? ' active border' : '')}
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Heater 1" ? " active" : "")
+                  }
                   onClick={handleClick}
                 >
                   Q<audio id="Q" src={heater1} className="clip"></audio>
@@ -120,9 +124,15 @@ const DrumBox = () => {
               </div>
               <div className="col">
                 <button
+                  type="button"
                   id="Heater 2"
                   name="w"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Heater 2"
+                      ? " active border border-dark"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   W<audio id="W" src={heater2} className="clip"></audio>
@@ -132,7 +142,12 @@ const DrumBox = () => {
                 <button
                   id="Heater 3"
                   name="e"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Heater 3"
+                      ? " active border border-dark"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   E<audio id="E" src={heater3} className="clip"></audio>
@@ -144,7 +159,12 @@ const DrumBox = () => {
                 <button
                   id="Heater 4"
                   name="a"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Heater 4"
+                      ? " active"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   A<audio id="A" src={heater4_1} className="clip"></audio>
@@ -154,7 +174,12 @@ const DrumBox = () => {
                 <button
                   id="Clap"
                   name="s"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Clap"
+                      ? " active"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   S<audio id="S" src={heater6} className="clip"></audio>
@@ -164,7 +189,12 @@ const DrumBox = () => {
                 <button
                   id="Open HH"
                   name="d"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Open HH"
+                      ? " active"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   D<audio id="D" src={dsc_oh} className="clip"></audio>
@@ -176,7 +206,12 @@ const DrumBox = () => {
                 <button
                   id="Kick n' Hat"
                   name="z"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Kick n' Hat"
+                      ? " active"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   Z<audio id="Z" src={kick_n_hat} className="clip"></audio>
@@ -186,7 +221,12 @@ const DrumBox = () => {
                 <button
                   id="Kick"
                   name="x"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Kick"
+                      ? " active"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   X<audio id="X" src={rp4_kick_1} className="clip"></audio>
@@ -196,7 +236,12 @@ const DrumBox = () => {
                 <button
                   id="Closed HH"
                   name="c"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={
+                    "btn btn-info fs-2 fw-bold drum-pad" +
+                    (soundMsg === "Closed HH"
+                      ? " active"
+                      : "")
+                  }
                   onClick={handleClick}
                 >
                   C<audio id="C" src={cev_h2} className="clip"></audio>
