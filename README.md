@@ -4,7 +4,7 @@ Third project to obtain the Front End Development Libraries certification from f
 
 
 ####  
-![project img]()
+![project img](./public/drum-machine.png)
 
 
-[Link to the Drum Machine](https://cwjki.github.io/markdown-previewer/) 
+[Link to the Drum Machine](https://cwjki.github.io/drum-machine/) 
