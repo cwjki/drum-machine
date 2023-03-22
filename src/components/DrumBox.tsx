@@ -1,4 +1,4 @@
-import { useState, MouseEvent, useEffect, useRef } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 
 // audios imports
 import cev_h2 from "../assets/Cev_H2.mp3";
@@ -115,7 +115,7 @@ const DrumBox = () => {
                   name="q"
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
-                    (soundMsg === "Heater 1" ? " active" : "")
+                    (soundMsg === "Heater 1" ? " active border-light" : "")
                   }
                   onClick={handleClick}
                 >
@@ -130,7 +130,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Heater 2"
-                      ? " active border border-dark"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -145,7 +145,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Heater 3"
-                      ? " active border border-dark"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -162,7 +162,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Heater 4"
-                      ? " active"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -177,7 +177,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Clap"
-                      ? " active"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -192,7 +192,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Open HH"
-                      ? " active"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -209,7 +209,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Kick n' Hat"
-                      ? " active"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -224,7 +224,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Kick"
-                      ? " active"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
@@ -239,7 +239,7 @@ const DrumBox = () => {
                   className={
                     "btn btn-info fs-2 fw-bold drum-pad" +
                     (soundMsg === "Closed HH"
-                      ? " active"
+                      ? " active border-light"
                       : "")
                   }
                   onClick={handleClick}
