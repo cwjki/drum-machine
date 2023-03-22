@@ -31,49 +31,49 @@ const DrumBox = () => {
 
   // function that given a key handles the audio and audio text. The allows keys are 'q w e a s d z x c'.
   const playAudio = (key: string) => {
-    let sound: string = "";
+    let sound: HTMLAudioElement | null;
     switch (key) {
       case "q":
-        sound = heater1;
+        sound = document.getElementById("Q") as HTMLAudioElement;
         setSoundMsg("Heater 1");
         break;
       case "w":
-        sound = heater2;
+        sound = document.getElementById("W") as HTMLAudioElement;
         setSoundMsg("Heater 2");
         break;
       case "e":
-        sound = heater3;
+        sound = document.getElementById("E") as HTMLAudioElement;
         setSoundMsg("Heater 3");
         break;
       case "a":
-        sound = heater4_1;
+        sound = document.getElementById("A") as HTMLAudioElement;
         setSoundMsg("Heater 4");
         break;
       case "s":
-        sound = heater6;
+        sound = document.getElementById("S") as HTMLAudioElement;
         setSoundMsg("Clap");
         break;
       case "d":
-        sound = dsc_oh;
+        sound = document.getElementById("D") as HTMLAudioElement;
         setSoundMsg("Open HH");
         break;
       case "z":
-        sound = kick_n_hat;
+        sound = document.getElementById("Z") as HTMLAudioElement;
         setSoundMsg("Kick n' Hat");
         break;
       case "x":
-        sound = rp4_kick_1;
+        sound = document.getElementById("X") as HTMLAudioElement;
         setSoundMsg("Kick");
         break;
       case "c":
-        sound = cev_h2;
+        sound = document.getElementById("C") as HTMLAudioElement;
         setSoundMsg("Closed HH");
         break;
 
       default:
-        sound = "";
+        sound = null;
     }
-    new Audio(sound).play();
+    sound?.play();
   };
 
   return (
@@ -114,7 +114,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  Q
+                  Q<audio id="Q" src={heater1} className="clip"></audio>
                 </button>
               </div>
               <div className="col">
@@ -124,7 +124,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  W
+                  W<audio id="W" src={heater2} className="clip"></audio>
                 </button>
               </div>
               <div className="col">
@@ -134,7 +134,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  E
+                  E<audio id="E" src={heater3} className="clip"></audio>
                 </button>
               </div>
             </div>
@@ -146,7 +146,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  A
+                  A<audio id="A" src={heater4_1} className="clip"></audio>
                 </button>
               </div>
               <div className="col">
@@ -156,7 +156,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  S
+                  S<audio id="S" src={heater6} className="clip"></audio>
                 </button>
               </div>
               <div className="col">
@@ -166,7 +166,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  D
+                  D<audio id="D" src={dsc_oh} className="clip"></audio>
                 </button>
               </div>
             </div>
@@ -178,7 +178,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  Z
+                  Z<audio id="Z" src={kick_n_hat} className="clip"></audio>
                 </button>
               </div>
               <div className="col">
@@ -188,7 +188,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  X
+                  X<audio id="X" src={rp4_kick_1} className="clip"></audio>
                 </button>
               </div>
               <div className="col">
@@ -198,7 +198,7 @@ const DrumBox = () => {
                   className="btn btn-info fs-2 fw-bold drum-pad"
                   onClick={handleClick}
                 >
-                  C
+                  C<audio id="C" src={cev_h2} className="clip"></audio>
                 </button>
               </div>
             </div>
