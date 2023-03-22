@@ -32,7 +32,7 @@ const DrumBox = () => {
   // function that given a key handles the audio and audio text. The allows keys are 'q w e a s d z x c'.
   const playAudio = (key: string) => {
     let sound: HTMLAudioElement | null;
-    switch (key) {
+    switch (key.toLowerCase()) {
       case "q":
         sound = document.getElementById("Q") as HTMLAudioElement;
         setSoundMsg("Heater 1");
@@ -73,6 +73,7 @@ const DrumBox = () => {
       default:
         sound = null;
     }
+    sound?.load();
     sound?.play();
   };
 
