@@ -112,7 +112,7 @@ const DrumBox = () => {
                 <button
                   id="Heater 1"
                   name="q"
-                  className="btn btn-info fs-2 fw-bold drum-pad"
+                  className={"btn btn-info fs-2 fw-bold drum-pad" + (soundMsg === 'Heater 1' ? ' active border' : '')}
                   onClick={handleClick}
                 >
                   Q<audio id="Q" src={heater1} className="clip"></audio>
